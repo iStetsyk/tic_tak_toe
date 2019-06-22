@@ -15,7 +15,7 @@ public class TicTakToe {
 
     public static Scanner in = new Scanner(System.in);
 
-    
+
     public static void main(String[] args) {
         StartGame();
         do {
@@ -29,7 +29,7 @@ public class TicTakToe {
             } else if (gameStatus == StatusRemis) {
                 System.out.println("No one winner!");
             }
-            ActivePlayerNow = (ActivePlayerNow == Cross ? Zero:Cross);
+            ActivePlayerNow = (ActivePlayerNow == Cross ? Zero : Cross);
         }
         while (gameStatus == TheGameContinue);
     }
@@ -48,9 +48,9 @@ public class TicTakToe {
 
         boolean inputTrue = false;
         do {
-            System.out.println("Player '"+ActivePlayerNow+"', please write");
-            int line = in.nextInt()-1;
-            int column = in.nextInt()-1;
+            System.out.println("Player '" + ActivePlayerNow + "', please write");
+            int line = in.nextInt() - 1;
+            int column = in.nextInt() - 1;
             if (line >= 0 && line < Line && column >= 0 && column < Column && net[line][column] == Empty) {
                 net[line][column] = ActivePlayerNow;
                 inputTrue = true;
@@ -116,24 +116,25 @@ public class TicTakToe {
             return net[0][0];
         }
         if (net[0][2] != Empty && net[1][1] == net[0][2] && net[2][0] == net[0][2]) {
-          return net[0][2];
+            return net[0][2];
         }
         return Empty;
     }
 
-    public static void ShowGrid() {
-        for (int line = 0; line < Line; line++) {
-            for (int column = 0; column < Column; column++) {
-                System.out.print(net[line][column]);
-                if(column!= Column-1) {
-                    System.out.print("|");
+    public static void ShowGrid () {
+            for (int line = 0; line < Line; line++) {
+                for (int column = 0; column < Column; column++) {
+                    System.out.print(net[line][column]);
+                    if (column != Column - 1) {
+                        System.out.print("|");
+                    }
+                }
+                System.out.println();
+                if (line != Line - 1) {
+                    System.out.println("-----------");
                 }
             }
             System.out.println();
-            if(line!= Line-1) {
-                System.out.println("-----------");
-            }
         }
-        System.out.println();
+
     }
-}
