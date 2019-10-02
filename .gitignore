@@ -1,33 +1,3 @@
-# Ustawienia uzytkownika:
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/dictionaries
-# Wazne dane prywatne, ktore nie powinny sie znalezc na gicie:
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.xml
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-# Gradle - builder czasami wykorzystywany:
-.idea/**/gradle.xml
-.idea/**/libraries
-## Stary format projektu:
-*.iws
-# IntelliJ
-/out/
-# Moduly
-.idea_modules/
-# JIRA plugin
-atlassian-ide-plugin.xml
-# Clojure plugin
-.idea/replstate.xml
-# Crashlytics plugin - analizator bledow
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
+.idea/
 target/
 *.iml
-.idea/
